@@ -57,6 +57,7 @@ app.add_middleware(
 @app.api_route("/", methods=["GET", "HEAD"])
 @app.api_route("/api/health", methods=["GET", "HEAD"])
 @app.api_route("/health", methods=["GET", "HEAD"])
+@app.api_route("/ping", methods=["GET", "HEAD"])
 async def health_check():
     return {"status": "ok", "service": "CivicPulse API"}
 
